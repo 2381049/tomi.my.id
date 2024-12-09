@@ -3,11 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learining Git</title>
+    <title>Tekno Pintar Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Hi,I'm Learning git</h1>
+<body class="bg-gray-100">
 
-    <a href="https://fti.unai.edu">FTI UNAI Website</a>
+    <!-- Header Section -->
+    <header class="bg-white  py-4 ">
+        <div class="flex flex-col sm:flex-row container mx-auto py-5 px-10 flex justify-between items-center">
+            <!-- Logo --> 
+            <a href="#" class="font-bold text-[25px] leading-[1.2] ml-40">Tekno Pintar</a>
+
+            <!-- Navigation Menu -->
+            <nav class="mr-48 hidden md:flex space-x-8 text-[#515151] ">
+                <a href="index.html" class="hover:text-[#7a8896] pl-4 pr-4">Home</a>
+                <a href="biodata.html" class="hover:text-[#7a8896] pl-4 pr-4">Biodata</a>
+                <a href="contact_us.html" class="hover:text-[#7a8896] pl-4 pr-4">Contact</a>
+                <a href="Posts.html" class="hover:text-[#7a8896] pl-4 pr-4">Post</a>
+                <a href="FreePage.html" class="hover:text-[#7a8896] pl-4 pr-4">FreePage</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-toggle" class="text-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+        <nav class="space-y-4 py-4 px-4 bg-white ">
+            <a href="index.html" class="block text-gray-800 hover:text-blue-600">Home</a>
+            <a href="biodata.html" class="block text-gray-800 hover:text-blue-600">Biodata</a>
+            <a href="contact_us.html" class="block text-gray-800 hover:text-blue-600">Contact</a>
+            <a href="Posts.html" class="hover:text-[#7a8896] pl-4 pr-4">Post</a>
+            <a href="FreePage.html" class="block text-gray-800 hover:text-blue-600">FreePage</a>
+        </nav>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container mx-auto px-48 m-5">
+        <div class="grid grid-cols-9 md:grid-cols-4 gap-5 ">
+            <!-- Main Content Area -->
+            <div class="md:col-span-3 bg-white p-6 rounded-sm order-2 md:order-1">
+                <h2 class="text-[35px] text-[#222222] mb-0 leading-[1.2em] transition-colors duration-300 ease-in-out hover:text-gray-600">
+                    Perbedaan Antara Sistem AC dan Chiller – PT MMI Jalan Mandor No. 28 Medan
+                </h2>
+                <div class="post-meta text-sm text-gray-500 mb-4">
+                    October 22, 2024 by <a href="#" class="text-blue-600 hover:text-gray-900">Sahrul Romadon</a>
+                </div>
+                <img src="teknopintar5.jpg" alt="Modern house design" class="w-full h-auto rounded-sm mb-4">
+                <div class="post-content text-gray-700">
+                    <p>Ketika membahas sistem pendingin udara, istilah “AC” (Air Conditioner) dan “Chiller” sering kali muncul dalam percakapan. Meskipun keduanya berfungsi untuk mendinginkan ruangan, terdapat perbedaan mendasar dalam cara kerja, aplikasi, dan efisiensi masing-masing sistem. Artikel ini akan menjelaskan perbedaan antara sistem ac dan ac chiller, serta kelebihan dan kekurangan masing-masing, sehingga Anda dapat memilih solusi pendinginan yang <span class="text-blue-600 hover:text-gray-900 cursor-pointer">... Read more</span></p>
+                </div>
+                <footer class="entry-meta flex items-center space-x-2 text-gray-500 mt-8">
+                    <!-- Icon (SVG) -->
+                    <span class="gp-icon file-icon">
+                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0 1 43.592 27.907l12.349 26.791A16 16 0 0 0 228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z" fill-rule="nonzero"></path>
+                        </svg>
+                    </span>
+                    
+                    <!-- Link -->
+                    <a href="#" class="text-blue-600 hover:text-blue-800 text-[0.85rem]">Ragam</a>
+                </footer>
+            </div>
+            
+            
+
+            <div class="md:col-span-3 bg-white p  rounded-sm p-6 order-2 md:order-1">
+                <h2 class="text-[35px] text-[#222222]  mb-0 leading-[1.2em] transition-colors duration-300 ease-in-out hover:text-gray-600">
+                    Jenis-Jenis Serta Cara Memilih Style Bangunan
+                </h2>
+                <div class="post-meta text-sm text-gray-500 mb-4">
+                    October 9, 2024 by <a href="#" class="text-blue-600 hover:text-gray-900">Sahrul Romadon</a>
+                </div>
+                <img src="teknopintar1.jpg" alt="Modern house design" class="w-full h-auto rounded-sm mb-4">
+                <div class="post-content text-gray-700">
+                    <p>Ketika membangun sebuah gedung, salah satu keputusan penting yang harus diambil adalah memilih gaya arsitektur yang tepat. Gaya bangunan tidak hanya memengaruhi estetika, tetapi juga fungsi, kenyamanan, dan nilai jual properti. Dikutip dari situs rhdesainrumah.com, dalam artikel kali ini, kita akan membahas berbagai jenis gaya bangunan serta cara memilih yang paling sesuai dengan kebutuhan dan …<span class="text-blue-400"> Read more</span></p>
+                </div>
+                <footer class="entry-meta flex items-center space-x-2 text-gray-500 mt-8">
+                    <!-- Icon (SVG) -->
+                    <span class="gp-icon file-icon">
+                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0 1 43.592 27.907l12.349 26.791A16 16 0 0 0 228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z" fill-rule="nonzero"></path>
+                        </svg>
+                    </span>
+                
+                    <!-- Link -->
+                    <a href="#" class="text-blue-600 hover:text-blue-800 text-[0.85rem]">Ragam</a>
+                </footer>
+            </div>
+
+            <div class="md:col-span-3 bg-white p  rounded-sm p-6 order-2 md:order-1">
+                <h2 class="text-[35px] text-[#222222]  mb-0 leading-[1.2em] transition-colors duration-300 ease-in-out hover:text-gray-600">
+                    Rekomendasi Aplikasi Edit Video AI Gratis Terbaik
+                </h2>
+                <div class="post-meta text-sm text-gray-500 mb-4">
+                    October 4, 2024 by <a href="#" class="text-blue-600 hover:text-gray-900">Sahrul Romadon</a>
+                </div>
+                <img src="teknopintar2.png" alt="Modern house design" class="w-full h-auto rounded-sm mb-4">
+                <div class="post-content text-gray-700">
+                    <p>Di era digital saat ini, video telah menjadi salah satu bentuk konten yang paling populer di media sosial dan platform lainnya. Dengan banyaknya permintaan untuk video berkualitas tinggi, aplikasi edit video yang menggunakan teknologi kecerdasan buatan (AI) semakin diminati. Teknologi ini membantu pengguna, baik pemula maupun profesional, untuk membuat video yang menarik dengan lebih cepat …<span class="text-blue-400"> Read more</span></p>
+                    
+                </div>
+                <footer class="entry-meta flex items-center space-x-2 text-gray-500 mt-8">
+                    <!-- Icon (SVG) -->
+                    <span class="gp-icon file-icon">
+                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0 1 43.592 27.907l12.349 26.791A16 16 0 0 0 228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z" fill-rule="nonzero"></path>
+                        </svg>
+                    </span>
+                
+                    <!-- Link -->
+                    <a href="#" class="text-blue-600 hover:text-blue-800 text-[0.85rem]">Ragam</a>
+                </footer>
+            </div>
+
+            <div class="md:col-span-3 bg-white p  rounded-sm p-6 order-2 md:order-1">
+                <h2 class="text-[35px] text-[#222222]  mb-0 leading-[1.2em] transition-colors duration-300 ease-in-out hover:text-gray-600">
+                    Cara Membasmi Rayap Menggunakan Bahan Alami – Solusibasmirayap.com
+                </h2>
+                <div class="post-meta text-sm text-gray-500 mb-4">
+                    October 3, 2024 by <a href="#" class="text-blue-600 hover:text-gray-900">Sahrul Romadon</a>
+                </div>
+                <img src="teknopintar3.jpg" alt="Modern house design" class="w-full h-auto rounded-sm mb-4">
+                <div class="post-content text-gray-700">
+                    <p>Rayap adalah salah satu hama yang bisa menyebabkan kerusakan serius pada struktur kayu dan furnitur di rumah. Menggunakan bahan kimia untuk membasmi rayap sering kali dianggap tidak aman, terutama jika ada anak-anak atau hewan peliharaan di sekitar. Namun, ada berbagai bahan alami yang efektif untuk mengusir rayap. Artikel ini akan membahas beberapa metode alami yang … <span class="text-blue-400"> Read more</span></p>
+                </div>
+                <footer class="entry-meta flex items-center space-x-2 text-gray-500 mt-8">
+                    <!-- Icon (SVG) -->
+                    <span class="gp-icon file-icon">
+                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0 1 43.592 27.907l12.349 26.791A16 16 0 0 0 228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z" fill-rule="nonzero"></path>
+                        </svg>
+                    </span>
+                
+                    <!-- Link -->
+                    <a href="#" class="text-blue-600 hover:text-blue-800 text-[0.85rem]">Ragam</a>
+                </footer>
+            </div>
+
+            <div class="md:col-span-3 bg-white p  rounded-sm p-6 order-2 md:order-1 h-[] w-[845px]">
+                <h2 class="text-[35px] text-[#222222]  mb-0 leading-[1.2em]  transition-colors duration-300 ease-in-out hover:text-gray-600">
+                    8 Tips Memilih Furniture Rumah Minimalis Agar Tidak Rugi
+                </h2>
+                <div class="post-meta text-sm text-gray-500 mb-4">
+                    October 14, 2024 by <a href="#" class="text-blue-600 hover:text-gray-900">Sahrul Romadon</a>
+                </div>
+                <img src="teknopintar4.jpg" alt="Modern house design" class="w-full h-auto rounded-sm mb-4">
+                <div class="post-content text-gray-700">
+                    <p>Memiliki rumah dengan desain minimalis menjadi tren yang semakin populer, terutama di kalangan mereka yang menginginkan ruang yang sederhana namun fungsional. Namun, memilih furniture untuk rumah minimalis bisa menjadi tantangan tersendiri. Anda ingin memastikan bahwa setiap item yang dibeli tidak hanya cocok dengan estetika rumah, tetapi juga memberikan nilai dan fungsi yang maksimal. Berikut adalah … <span class="text-blue-400">Read more</span></p>
+                </div>
+                <footer class="entry-meta flex items-center space-x-2 text-gray-500 mt-8">
+                    <!-- Icon (SVG) -->
+                    <span class="gp-icon file-icon">
+                        <svg class="w-4 h-4 text-gray-600" viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0 1 43.592 27.907l12.349 26.791A16 16 0 0 0 228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z" fill-rule="nonzero"></path>
+                        </svg>
+                    </span>
+                
+                    <!-- Link -->
+                    <a href="#" class="text-blue-600 hover:text-blue-800 text-[0.85rem]">Ragam</a>
+                </footer>
+            </div>
+
+            
+
+            <!-- Sidebar Section (on the right) -->
+            <div class="sidebar md:col-span-1 p-6 rounded-sm space-y-6 mt-8 md:mt-0 order-1 md:order-2 absolute right-9 mr-20">
+                <div class="search-widget  p-8 relative mb-5 h-[115px] w-[300px] bg-white">
+                    <form action="#" method="GET">
+                        <!-- Ikon pencarian -->
+                        <svg class="absolute left-56  top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#666] text-white p-4  cursor-pointer ml-0" viewBox="0 0 512 512" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path fill="currentColor" d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z"></path>
+                        </svg>
+                        
+                        <!-- Input pencarian -->
+                        <input type="search" class="w-full p-3 pl-12 pr-4 border border-gray-300 " placeholder="Search...">
+                    </form>
+                </div>
+                
+
+                <div class="recent-posts h-[600px] w-[300px] bg-white p-8 ">
+                    <h3 class="text-xl vover: font-semibold text-gray-800 mb-4">Bacaan Baru</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-400 over:text-gray-900 mb-2">Jenis-Jenis Serta Cara Memilih Style Bangunan</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-gray-900 mb-2">Rekomendasi Aplikasi Edit Video AI Gratis Terbaik</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-gray-900 mb-2">Cara Membasmi Rayap Menggunakan Bahan Alami – Solusibasmirayap.com</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-gray-900 mb-2">8 Tips Memilih Furniture Rumah Minimalis Agar Tidak Rugi</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-gray-900 mb-2">Mengenal Pentingnya Layanan Publik Medis Terbuka untuk Membantu Masyarakat</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-gray-900 mb-2">6 Fitur Terbaik WP Download Manager yang Wajib Diketahui</a></li>
+                        <li><a href="#" class="text-blue-400 hover:text-gray-900 mb-2">Perbedaan Antara Sistem AC dan Chiller – PT MMI Jalan Mandor No. 28 Medan</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="related-links h-[600px] w-[300px] bg-white p-8 ">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Artikel Pintar Lainnya</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-4">
+                            <a href="#">
+                                <img width="50" height="50" src="page1.jpg" class="w-36 h-12 object-cover " alt="17 Aplikasi Kamera Android DSLR Terbaik dan Tercanggih"/>
+                            </a>
+                            <a href="#" class="text-blue-400 hover:text-gray-900">17 Aplikasi Kamera Android DSLR Terbaik dan Tercanggih</a>
+                        </li>
+                        
+                        <li class="flex items-center space-x-4">
+                            <a href="#">
+                                <img width="50" height="50" src="page2.jpg" class="w-36 h-12 object-cover " alt="10 Aplikasi Video Editing Android Terbaik dan Terpopuler"/>
+                            </a>
+                            <a href="#" class="text-blue-400 hover:text-gray-900">10 Aplikasi Video Editing Android Terbaik dan Terpopuler</a>
+                        </li>
+                    
+                        <li class="flex items-center space-x-4">
+                            <a href="#">
+                                <img width="50" height="50" src="page3.jpg" class="w-36 h-12 object-cover " alt="Cara Membersihkan Kaca Helm yang Buram dan Lecet"/>
+                            </a>
+                            <a href="#" class="text-blue-400 hover:text-gray-900">Cara Membersihkan Kaca Helm yang Buram dan Lecet</a>
+                        </li>
+                    
+                        <li class="flex items-center space-x-4">
+                            <a href="#">
+                                <img width="50" height="50" src="page4.jpg" class="w-36 h-12 object-cover " alt="Kelebihan Fitur Terbaru dari iPhone 7 yang Tidak Ada Sebelumnya"/>
+                            </a>
+                            <a href="#" class="text-blue-400 hover:text-gray-900">Kelebihan Fitur Terbaru dari iPhone 7 yang Tidak Ada Sebelumnya</a>
+                        </li>
+                    
+                        <li class="flex items-center space-x-4">
+                            <a href="#">
+                                <img width="50" height="50" src="page5.jpg" class="w-36 h-12 object-cover " alt="Cara Membuat Status Bar Transparan Di Android Mudah Terbaru"/>
+                            </a>
+                            <a href="#" class="text-blue-400 hover:text-gray-900">Cara Membuat Status Bar Transparan Di Android Mudah Terbaru</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                    <div class="text-center bg-white">
+                        <h3 class="text-4xl font-semibold text-gray-700 text-white">Halaman Kosong</h3>
+                        <p class="text-lg text-gray-500 mt-4 text-white">Halaman ini tidak memiliki konten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" mx-auto px-48 m-5 ">
+        <nav class="paging-navigation py-0">
+            <div class="flex items-center space-x-3 bg-white w-[850px] h-[70px] ">
+                <span aria-current="page" class="page-number current text-sm text-gray-700 font-semibold ml-10">
+                    <span class="screen-reader-text"></span>
+                    1
+                </span>
+                <a class=" text-sm text-blue-500 hover:text-blue-600" href="#">
+                    <span class="readmore">2</span>
+                </a>
+                <span class=" text-gray-700">...</span>
+                <a class=" text-sm text-blue-500 hover:text-blue-600" href="#">
+                    <span class="readmore">81</span>
+                </a>
+                <a class="  text-sm text-blue-500 hover:text-blue-600" href="#">
+                    Next <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Tekno Pintar. All rights reserved.</p>
+            <a class="hover:text-gray-400 p-3" href="https://fti.unai.edu/">FTI UNAI</a>
+            <a class="hover:text-gray-400 p-3" href="https://unai.edu/">Situs Web</a>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle the mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

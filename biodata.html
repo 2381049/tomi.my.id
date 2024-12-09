@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Additional Styling */
+        .mobile-menu { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+<!-- Navbar Section -->
+<nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                <button id="hamburger" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex items-center justify-center sm:items-stretch sm:justify-start righ-0">
+                <a href="#" class="text-xl font-bold text-gray-900">My Profiles</a>
+            </div>
+            <!-- Navbar Links (Desktop) -->
+            <div class="hidden md:flex space-x-8 text-[#515151] ">
+                <a href="index.html" class="hover:text-[#7a8896] pl-4 pr-4">Home</a>
+                <a href="biodata.html" class="hover:text-[#7a8896] pl-4 pr-4">Biodata</a>
+                <a href="contact_us.html" class="hover:text-[#7a8896] pl-4 pr-4">Contact</a>
+                <a href="Posts.html" class="hover:text-[#7a8896] pl-4 pr-4">Post</a>
+                <a href="FreePage.html" class="hover:text-[#7a8896] pl-4 pr-4">FreePage</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Navbar (Hidden by Default) -->
+<div id="mobileMenu" class="hidden sm:hidden bg-white shadow-md absolute top-16 left-0 right-0 z-10 flex flex-col space-y-4 p-4">
+    <a href="index.html" class="text-gray-900">Home</a>
+    <a href="biodata.html" class="text-gray-900">Biodata</a>
+    <a href="contact_us.html" class="text-gray-900">Contact</a>
+    <a href="Posts.html" class="text-gray-900">Post</a>
+    <a href="FreePage.html" class="text-gray-900">FreePage</a>
+</div>
+
+<!-- Container for Personal Info and Testimonial -->
+<section class="container mx-auto py-10 px-4 sm:px-6 lg:px-10">
+
+    <!-- Personal Information Section -->
+    <div class="flex flex-col sm:flex-row bg-white shadow-lg rounded-lg overflow-hidden">
+
+        <!-- Photo Section -->
+        <div class="sm:w-1/3 p-5 flex justify-center items-center">
+            <img src="biodata1.jpg" alt="Foto Diri" class="w-40 h-40 rounded-full border-4 border-gray-300">
+        </div>
+
+        <!-- Personal Details -->
+        <div class="sm:w-2/3 p-5">
+            <h2 class="text-2xl font-bold text-gray-800">Nama: Thomson Situmorang</h2>
+            <p class="text-xl text-gray-600 mt-2">Nomor Induk Mahasiswa: 2381049</p>
+            <p class="text-xl text-gray-600 mt-2">Fakultas: Fakultas Teknologi Informasi</p>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-4">Hobi:</h3>
+            <ul class="list-disc ml-5 text-gray-600">
+                <li>Main Game</li>
+                <li>Membaca buku</li>
+                <li>Bermain Basket</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-4">Keterampilan:</h3>
+            <ul class="list-disc ml-5 text-gray-600">
+                <li>HTML, CSS, JavaScript</li>
+                <li>Manajemen Bisnis</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class="mt-10 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-2xl font-bold text-gray-800">Testimonial</h2>
+        <p class="text-lg text-gray-600 mt-4">
+            "Selama mengikuti kelas Pembelajaran Pemrograman Web 1, saya mempelajari dasar-dasar pembuatan website menggunakan HTML, CSS, dan TailwindCSS. Selain itu, saya juga diajarkan cara menghosting website dan menggunakan domain untuk publikasi website. Pembelajaran ini sangat bermanfaat bagi saya, terutama dalam memahami bagaimana tampilan website yang responsif bisa dibuat dengan efisien menggunakan framework seperti TailwindCSS. Dengan pengetahuan ini, saya merasa lebih siap untuk mengembangkan website di masa depan dan memahami proses dari awal hingga akhir."
+        </p>
+    </div>
+</section>
+
+<!-- JavaScript to Toggle Menu -->
+<script>
+    // Get the hamburger and mobile menu elements
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    // Add click event listener to toggle the menu
+    hamburger.addEventListener('click', () => {
+        // Toggle the visibility of the mobile menu
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-6 mt-8">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Tekno Pintar. All rights reserved.</p>
+        <a class="hover:text-gray-400 p-3" href="https://fti.unai.edu/">FTI UNAI</a>
+        <a class="hover:text-gray-400 p-3" href="https://unai.edu/">Situs Web</a>
+    </div>
+</footer>
+
+</body>
+</html>

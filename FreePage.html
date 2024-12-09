@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konten Kreatif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+<!-- Navbar Section -->
+<nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                <button id="hamburger" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex items-center justify-center sm:items-stretch sm:justify-start righ-0">
+                <a href="#" class="text-xl font-bold text-gray-900">My Profiles</a>
+            </div>
+            <!-- Navbar Links (Desktop) -->
+            <div class="hidden md:flex space-x-8 text-[#515151] ">
+                <a href="index.html" class="hover:text-[#7a8896] pl-4 pr-4">Home</a>
+                <a href="biodata.html" class="hover:text-[#7a8896] pl-4 pr-4">Biodata</a>
+                <a href="contact_us.html" class="hover:text-[#7a8896] pl-4 pr-4">Contact</a>
+                <a href="Posts.html" class="hover:text-[#7a8896] pl-4 pr-4">Post</a>
+                <a href="FreePage.html" class="hover:text-[#7a8896] pl-4 pr-4">FreePage</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- JavaScript to Toggle Menu -->
+<script>
+    // Get the hamburger and mobile menu elements
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    // Add click event listener to toggle the menu
+    hamburger.addEventListener('click', () => {
+        // Toggle the visibility of the mobile menu
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+<!-- Mobile Navbar (Hidden by Default) -->
+<div id="mobileMenu" class="hidden sm:hidden bg-white shadow-md absolute top-16 left-0 right-0 z-10 flex flex-col space-y-4 p-4">
+    <a href="index.html" class="text-gray-900">Home</a>
+    <a href="biodata.html" class="text-gray-900">Biodata</a>
+    <a href="contact_us.html" class="text-gray-900">Contact</a>
+    <a href="Posts.html" class="text-gray-900">Post</a>
+    <a href="FreePage.html" class="text-gray-900">FreePage</a>
+</div>
+
+    <!-- Konten Kreatif: Galeri Proyek -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 flex-grow">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Game Blog</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="Strinova.jpg" alt="Project 1" class="w-full h-56 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-gray-900">Strinova</h3>
+                <p class="text-gray-700 mt-2">Strinova adalah sebuah game petualangan aksi yang menggabungkan elemen eksplorasi dunia terbuka dengan sistem pertarungan yang dinamis dan narasi yang mendalam. Dalam game ini, pemain akan memasuki dunia fantasi yang luas, di mana mereka memerankan seorang pahlawan yang terpilih untuk menyelamatkan dunia Strinova dari kehancuran.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="Valorant.jpg" alt="Project 2" class="w-full h-56 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-gray-900">Valorant</h3>
+                <p class="text-gray-700 mt-2">Valorant adalah game taktis tembak-menembak (FPS) berbasis tim yang dikembangkan oleh Riot Games, yang juga dikenal karena game legendaris mereka, League of Legends. Dirilis pada tahun 2020, Valorant menawarkan pengalaman bermain kompetitif dengan kombinasi strategi, keterampilan tembak-menembak, dan kemampuan karakter unik yang dikenal sebagai "Agents."</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img src="Mobile Legends.jpg" alt="Project 3" class="w-full h-56 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-gray-900">Mobile Legends</h3>
+                <p class="text-gray-700 mt-2">Mobile Legends: Bang Bang (MLBB) adalah game multiplayer online battle arena (MOBA) yang sangat populer, dikembangkan dan diterbitkan oleh Moonton. Dirilis pada tahun 2016, Mobile Legends memungkinkan pemain untuk bersaing dalam pertarungan 5v5 secara real-time, di mana tim harus bekerja sama untuk menghancurkan markas musuh sambil mempertahankan markas mereka sendiri. Game ini banyak dimainkan di berbagai negara, terutama di Asia, dan menjadi salah satu game e-sports terbesar di dunia mobile.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Tekno Pintar. All rights reserved.</p>
+            <a class="hover:text-gray-400 p-3" href="https://fti.unai.edu/">FTI UNAI</a>
+            <a class="hover:text-gray-400 p-3" href="https://unai.edu/">Situs Web</a>
+        </div>
+    </footer>
+
+</body>
+</html>

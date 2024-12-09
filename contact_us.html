@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Siswa</title>
+    <script>
+        // Validasi Formulir
+        function validateForm(event) {
+            event.preventDefault();  // Mencegah pengiriman formulir sebelum validasi
+
+            // Mengambil nilai input
+            const name = document.getElementById('name').value;
+            const nim = document.getElementById('nim').value;
+            const email = document.getElementById('email').value;
+            const faculty = document.getElementById('faculty').value;
+            const dob = document.getElementById('dob').value;
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const address = document.getElementById('address').value;
+            const phone = document.getElementById('phone').value;
+            
+            let valid = true;
+            let messages = [];
+
+            // Validasi Nama Lengkap
+            if (name === "") {
+                valid = false;
+                messages.push("Nama Lengkap harus diisi.");
+                document.getElementById('name').classList.add('border-red-500');
+            } else {
+                document.getElementById('name').classList.remove('border-red-500');
+            }
+
+            // Validasi Nomor Induk Mahasiswa (NIM)
+            if (nim === "") {
+                valid = false;
+                messages.push("Nomor Induk Mahasiswa (NIM) harus diisi.");
+                document.getElementById('nim').classList.add('border-red-500');
+            } else {
+                document.getElementById('nim').classList.remove('border-red-500');
+            }
+
+            // Validasi Email
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                valid = false;
+                messages.push("Email tidak valid.");
+                document.getElementById('email').classList.add('border-red-500');
+            } else {
+                document.getElementById('email').classList.remove('border-red-500');
+            }
+
+            // Validasi Fakultas/Jurusan
+            if (faculty === "") {
+                valid = false;
+                messages.push("Fakultas/Jurusan harus dipilih.");
+                document.getElementById('faculty').classList.add('border-red-500');
+            } else {
+                document.getElementById('faculty').classList.remove('border-red-500');
+            }
+
+            // Validasi Tanggal Lahir
+            if (dob === "") {
+                valid = false;
+                messages.push("Tanggal Lahir harus diisi.");
+                document.getElementById('dob').classList.add('border-red-500');
+            } else {
+                document.getElementById('dob').classList.remove('border-red-500');
+            }
+
+            // Validasi Jenis Kelamin
+            if (!gender) {
+                valid = false;
+                messages.push("Jenis Kelamin harus dipilih.");
+            }
+
+            // Validasi Alamat
+            if (address === "") {
+                valid = false;
+                messages.push("Alamat harus diisi.");
+                document.getElementById('address').classList.add('border-red-500');
+            } else {
+                document.getElementById('address').classList.remove('border-red-500');
+            }
+
+            // Validasi Nomor Telepon
+            const phonePattern = /^[0-9]{10,12}$/;
+            if (!phonePattern.test(phone)) {
+                valid = false;
+                messages.push("Nomor Telepon harus berupa angka dan panjangnya antara 10-12 digit.");
+                document.getElementById('phone').classList.add('border-red-500');
+            } else {
+                document.getElementById('phone').classList.remove('border-red-500');
+            }
+
+            // Menampilkan pesan kesalahan jika ada
+            if (!valid) {
+                alert(messages.join("\n"));
+            } else {
+                alert("Formulir berhasil dikirim.");
+                document.getElementById('registrationForm').reset();
+            }
+        }
+
+        // Sorot masukan yang difokuskan
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    input.classList.add('border-blue-500');
+                });
+                input.addEventListener('blur', function() {
+                    input.classList.remove('border-blue-500');
+                });
+            });
+        });
+
+        // Toggle Navbar Menu (Mobile)
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="absolute inset-y-0 right-0  flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white " onclick="toggleMenu()">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex items-center justify-center sm:items-stretch sm:justify-start righ-0">
+                    <a href="#" class="text-xl font-bold text-gray-900">Logo</a>
+                </div>
+                <!-- Navbar Links (Desktop) -->
+                <div class="hidden md:flex space-x-8 text-[#515151] ">
+                    <a href="index.html" class="hover:text-[#7a8896] pl-4 pr-4">Home</a>
+                    <a href="biodata.html" class="hover:text-[#7a8896] pl-4 pr-4">Biodata</a>
+                    <a href="contact_us.html" class="hover:text-[#7a8896] pl-4 pr-4">Contact</a>
+                    <a href="Posts.html" class="hover:text-[#7a8896] pl-4 pr-4">Post</a>
+                <a href="FreePage.html" class="hover:text-[#7a8896] pl-4 pr-4">FreePage</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navbar (Hidden by Default) -->
+    <div id="mobileMenu" class="hidden sm:hidden bg-white shadow-md absolute top-16 left-0 right-0 z-10 flex flex-col space-y-4 p-4">
+        <a href="index.html" class="text-gray-900">Home</a>
+        <a href="biodata.html" class="text-gray-900">Biodata</a>
+        <a href="contact_us.html" class="text-gray-900">Contact</a>
+        <a href="Posts.html" class="text-gray-900">Post</a>
+        <a href="FreePage.html" class="text-gray-900">FreePage</a>
+    </div>
+
+    <!-- Formulir Pendaftaran -->
+    <div class="max-w-4xl mx-auto bg-white p-8 mt-10 rounded-md shadow-md">
+        <h1 class="text-2xl font-semibold text-center mb-5">Formulir Pendaftaran Siswa</h1>
+        <form id="registrationForm" onsubmit="validateForm(event)" class="space-y-5">
+            <!-- Nama Lengkap -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Masukkan nama lengkap">
+            </div>
+
+            <!-- Nomor Induk Mahasiswa -->
+            <div>
+                <label for="nim" class="block text-sm font-medium text-gray-700">Nomor Induk Mahasiswa (NIM)</label>
+                <input type="text" id="nim" name="nim" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Masukkan NIM">
+            </div>
+
+            <!-- Alamat Email -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Alamat Email</label>
+                <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Masukkan alamat email">
+            </div>
+
+            <!-- Fakultas/Jurusan -->
+            <div>
+                <label for="faculty" class="block text-sm font-medium text-gray-700">Fakultas/Jurusan</label>
+                <select id="faculty" name="faculty" class="w-full p-2 border border-gray-300 rounded-md">
+                    <option value="">Pilih Fakultas/Jurusan</option>
+                    <option value="fakultas-hukum">Fakultas Teknik Informasi</option>
+                    <option value="fakultas-ekonomi">Fakultas Filsafat</option>
+                    <option value="fakultas-teknik">Fakultas Ilmu Keperawatan</option>
+                    <option value="fakultas-teknik">Fakultas Fakultas Keguruan & Ilmu Pendidikan</option>
+                    <option value="fakultas-teknik">Fakultas Matematika dan Ilmu Pengetahuan Alam</option>
+                </select>
+            </div>
+
+            <!-- Tanggal Lahir -->
+            <div>
+                <label for="dob" class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
+                <input type="date" id="dob" name="dob" class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+
+            <!-- Jenis Kelamin -->
+            <div class="flex items-center space-x-4">
+                <label class="block text-sm font-medium text-gray-700">Jenis Kelamin</label>
+                <div class="flex items-center">
+                    <input type="radio" id="male" name="gender" value="pria" class="mr-2">
+                    <label for="male">Pria</label>
+                </div>
+                <div class="flex items-center">
+                    <input type="radio" id="female" name="gender" value="wanita" class="mr-2">
+                    <label for="female">Wanita</label>
+                </div>
+            </div>
+
+            <!-- Alamat -->
+            <div>
+                <label for="address" class="block text-sm font-medium text-gray-700">Alamat</label>
+                <textarea id="address" name="address" rows="3" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Masukkan alamat lengkap"></textarea>
+            </div>
+
+            <!-- Nomor Telepon -->
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Nomor Telepon</label>
+                <input type="text" id="phone" name="phone" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Masukkan nomor telepon">
+            </div>
+
+            <!-- Tombol Kirim -->
+            <div class="flex justify-center">
+                <button type="submit" class="px-6 py-2 bg-blue-500 text-white rounded-md">Kirim</button>
+            </div>
+        </form>
+    </div>
+
+        <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Tekno Pintar. All rights reserved.</p>
+            <a class="hover:text-gray-400 p-3" href="https://fti.unai.edu/">FTI UNAI</a>
+            <a class="hover:text-gray-400 p-3" href="https://unai.edu/">Situs Web</a>
+        </div>
+    </footer>
+
+</body>
+</html>
